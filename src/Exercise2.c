@@ -19,6 +19,13 @@ int main(int argc, char *argv[]) {
 	int n = atoi(argv[1]);
 	int result;
 	//Your codes here
+	result = 1;
+	int i = n % 2 == 0 ? 2 : 1;
+	for (; i <= n; i += 2)
+	{
+		result *= i;
+	}
+	
 	
 	printf("%d", result);
 	return 0;
