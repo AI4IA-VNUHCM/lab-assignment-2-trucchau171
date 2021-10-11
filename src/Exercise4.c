@@ -27,21 +27,21 @@ int main(int argc, char *argv[]) {
 		{
 			if (test_array[j] > test_array[j + 1])
 			{
-				int temp = test_array[i];
-				test_array[i] = test_array[j];
-				test_array[j] = temp;
+				int temp = test_array[j];
+				test_array[j] = test_array[j + 1];
+				test_array[j + 1] = temp;
 			}
 		}
 	}
-	for (int i = n / 2 - 1; i < n - 1; i++)
+	for (int i = 0; i < n / 2 - 1; i++)
 	{
-		for (int j = n / 2 - 1; j < n - i - 1; j++)
+		for (int j = n / 2; j < n - i - 1; j++)
 		{
 			if (test_array[j] < test_array[j + 1])
 			{
-				int temp = test_array[i];
-				test_array[i] = test_array[j];
-				test_array[j] = temp;
+				int temp = test_array[j];
+				test_array[j] = test_array[j + 1];
+				test_array[j + 1] = temp;
 			}
 		}
 	}
