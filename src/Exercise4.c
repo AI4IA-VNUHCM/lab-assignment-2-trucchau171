@@ -23,9 +23,9 @@ int main(int argc, char *argv[]) {
 	//Your codes here
 	for (int i = 0; i < n / 2 - 1; i++)
 	{
-		for (int j = i + 1; j < n / 2; j++)
+		for (int j = 0; j < n / 2 - i - 1; j++)
 		{
-			if (test_array[i] > test_array[j])
+			if (test_array[j] > test_array[j + 1])
 			{
 				int temp = test_array[i];
 				test_array[i] = test_array[j];
@@ -35,9 +35,9 @@ int main(int argc, char *argv[]) {
 	}
 	for (int i = n / 2 - 1; i < n - 1; i++)
 	{
-		for (int j = i + 1; j < n; j++)
+		for (int j = n / 2 - 1; j < n - i - 1; j++)
 		{
-			if (test_array[i] < test_array[j])
+			if (test_array[j] < test_array[j + 1])
 			{
 				int temp = test_array[i];
 				test_array[i] = test_array[j];
